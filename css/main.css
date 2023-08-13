@@ -43,14 +43,14 @@ h4 {
   margin-bottom: 1.25rem;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 0;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 0;
 }
 h4 {
@@ -59,7 +59,7 @@ h4 {
 }
 p {
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 2;
 }
 /* button */
@@ -147,5 +147,67 @@ p {
   .hero-header {
     background: linear-gradient(rgba(241, 80, 37, 0.75), rgba(0, 0, 0, 0.5)),
       url("../images/image-2.jpeg") center/cover fixed no-repeat;
+  }
+}
+
+/********************/
+/* cards            */
+/********************/
+
+.cards .title {
+  margin: 3rem 1rem;
+  text-align: center;
+}
+
+.cards-center {
+  width: 80vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  border: 1px solid var(--clr-darkgray);
+  margin-bottom: 3rem;
+}
+.card-image {
+  height: 20rem;
+  object-fit: cover;
+}
+.card-info {
+  padding: 1rem;
+}
+.card-title {
+  padding-bottom: 0.5rem;
+}
+.card-footer {
+  background: var(--clr-darkgray);
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.card-footer a {
+  color: var(--clr-primary);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: var(--transtion);
+}
+.card-footer a:hover {
+  color: var(--clr-black);
+  transform: scale(1.2);
+}
+
+@media screen and (min-width: 768px) {
+  .cards-center {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .cards-center {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
