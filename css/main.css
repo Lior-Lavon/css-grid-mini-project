@@ -1,3 +1,19 @@
+/********************/
+/* global variables */
+/********************/
+:root {
+  --clr-primary: #f15025;
+  --clr-black: #222;
+  --clt-white: #fff;
+  --clr-offwhite: #f7f7f7;
+  --clr-darkgray: #afafaf;
+  --transtion: all 0.3s linear;
+  --spacing: 0.2rem;
+  --line-height: 1.5;
+}
+/********************/
+/* global styles    */
+/********************/
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +22,93 @@
 
 body {
   font-family: "Fira Code", monospace;
+  color: var(--clr-black);
+  background: var(--clt-white);
+  line-height: var(--line-height);
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin-bottom: 1.25rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+/* button */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border: 4px solid var(--clr-primary);
+  background: rgba(255, 0, 0, 0.1);
+  color: var(--clr-primary);
+  font-size: 1rem;
+  margin: 3rem;
+  transition: var(--transtion);
+}
+.btn:hover {
+  background: var(--clr-primary);
+  color: var(--clt-white);
+}
+
+/********************/
+/* main navbar      */
+/********************/
+.main-navbar {
+  background: var(--clr-darkgray);
+  padding: 0 2rem;
+}
+.main-navbar li {
+  list-style-type: none;
+}
+.main-navbar a {
+  text-transform: capitalize;
+  display: block;
+  padding: 1rem 0;
+  color: var(--clr-primary);
+  letter-spacing: var(--spacing);
+  transition: var(--transtion);
+}
+.main-navbar a:hover {
+  color: var(--clr-black);
+}
+
+@media screen and (min-width: 992px) {
+  .main-navbar ul {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main-navbar a {
+    text-align: center;
+  }
 }
