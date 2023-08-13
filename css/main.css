@@ -112,3 +112,40 @@ p {
     text-align: center;
   }
 }
+
+/********************/
+/* hero             */
+/********************/
+.hero-header {
+  background: var(--clr-primary);
+  min-height: 100vh;
+  color: var(--clt-white);
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.header-center {
+  /* width: 80vw;
+  margin: 0 auto; */
+  max-width: 560px;
+  /* padding: 0 1rem; */
+}
+.header-center p {
+  font-size: 1rem;
+}
+
+/* set padding < 600px  */
+@media screen and (max-width: 600px) {
+  .header-center {
+    padding: 0 3rem;
+  }
+}
+
+/* set background */
+@media screen and (min-width: 768px) {
+  .hero-header {
+    background: linear-gradient(rgba(241, 80, 37, 0.75), rgba(0, 0, 0, 0.5)),
+      url("../images/image-2.jpeg") center/cover fixed no-repeat;
+  }
+}
