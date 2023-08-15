@@ -154,7 +154,7 @@ p {
 /* cards            */
 /********************/
 
-.cards .title {
+.title {
   margin: 3rem 1rem;
   text-align: center;
 }
@@ -252,16 +252,8 @@ p {
 /* tiles            */
 /********************/
 
-.tiles .title {
-  text-align: center;
-}
-.tiles .title h1 {
-  width: 90%;
-  margin: 3rem auto;
-}
-
-.tile {
-  margin-bottom: 2rem;
+.tiles {
+  padding: 3rem 0;
 }
 
 .tiles-center {
@@ -270,16 +262,18 @@ p {
   margin: 0 auto;
 
   display: grid;
-  column-gap: 2rem;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(367px, 1fr));
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1170px) {
   .tiles-center {
+    transition: var(--transtion);
+
     display: grid;
-    gap: 2rem;
+    /* gap: 2rem; */
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 219px);
+    grid-template-rows: repeat(5, 200px);
     grid-template-areas:
       "a a a b"
       "a a a c"
@@ -330,4 +324,7 @@ p {
     grid-area: i;
     background: grey;
   }
+}
+.tiles-center:hover {
+  gap: 0;
 }
